@@ -5,35 +5,35 @@ var right      = new Array();
 var def        = new Array();
 var NUM_SCALES = 6;
 
-scale[0]  = "知的・知覚的要求"; 
-left[0]   = "小さい";
-right[0]  = "大きい";
-def[0]    = "<p>どの程度の知的・知覚的活動(考える、決める、計算する、記憶する、見るなど)を必要としましたか。<br>課題はやさしかったですか。それとも難しかったですか。<br>単純でしたか。それとも複雑でしたか。<br>正確さが求められましたか。それとも大ざっぱでよかったですか。</p>";
+scale[0]  = "Mental Demand"; 
+left[0]   = "Low";
+right[0]  = "High";
+def[0]    = "<p>How much mental and perceptual activity was required (e.g. thinking, deciding, calculating, remembering, looking, searching, etc)?<br>Was the task easy or demanding, simple or complex, exacting or forgiving?</p>";
 
-scale[1]  = "身体的要求"; 
-left[1]   = "小さい";
-right[1]  = "大きい";
-def[1]    = "<p>どの程度の身体的活動(押す、引く、回す、制御する、動き回るなど)を必要としましたか。<br>作業はラクでしたか。それともキツかったですか。<br>ゆっくりできましたか。それともキビキビやらなければなりませんでしたか。<br>休み休みできましたか。それとも働きづめでしたか。</p>";
+scale[1]  = "Physical Demand"; 
+left[1]   = "Low";
+right[1]  = "High";
+def[1]    = "<p>How much physical activity was required (e.g. pushing, pulling, turning, controlling, activating, etc)?<br>Was the task easy or demanding, slow or brisk, slack or strenuous, restful or laborious?</p>";
 
-scale[2]  = "タイムプレッシャー"; 
-left[2]   = "弱い";
-right[2]  = "強い";
-def[2]    = "<p>仕事のペースや課題が発生する頻度のために感じる時間的切迫感はどの程度でしたか。<br>ペースはゆっくりとして余裕があるものでしたか。それとも速くて余裕のないものでしたか。</p>";
+scale[2]  = "Temporal Demand"; 
+left[2]   = "Low";
+right[2]  = "High";
+def[2]    = "<p>How much time pressure did you feel due to the rate of pace at which the tasks or task elements occurred? <br>Was the pace slow and leisurely or rapid and frantic?</p>";
 
-scale[3]  = "作業成績"; 
-left[3]   = "良い";
-right[3]  = "悪い";
-def[3]    = "<p>作業指示者によって設定された課題の目標をどの程度達成できたと思いますか。<br>目標の達成に関して自分の作業成績にどの程度満足していますか。</p>";
+scale[3]  = "Performance"; 
+left[3]   = "Good";
+right[3]  = "Bad";
+def[3]    = "<p>How successful do you think you were in accomplishing the goals of the task set by the experimenter (or yourself)?<br>How satisfied were you with your performance in accomplishing these goals?</p>";
 
-scale[4]  = "努力"; 
-left[4]   = "少ない";
-right[4]  = "多い";
-def[4]    = "<p>作業成績のレベルを達成・維持するために、精神的・身体的にどの程度一生懸命に作業しなければなりませんでしたか。</p>";
+scale[4]  = "Effort"; 
+left[4]   = "Low";
+right[4]  = "High";
+def[4]    = "<p>How hard did you have to work (mentally and physically) to accomplish your level of performance?</p>";
 
-scale[5]  = "フラストレーション"; 
-left[5]   = "低い";
-right[5]  = "高い";
-def[5]    = "<p>作業中に、不安感、落胆、いらいら、ストレス、悩みをどの程度感じましたか。あるいは逆に、安心感、満足感、充足感、楽しさ、リラックスをどの程度感じましたか。</p>";
+scale[5]  = "Frustration"; 
+left[5]   = "Low";
+right[5]  = "High";
+def[5]    = "<p>How insecure, discouraged, irritated, stressed and annoyed versus secure, gratified, content, relaxed and complacent did you feel during the task?</p>";
 
 window.addEventListener('load', OnLoad);
 function OnLoad() {}
@@ -141,10 +141,10 @@ function nextPair()
 
           navigator.clipboard.writeText(scoredata).then(
             () => {
-              alert('文章をコピーしました。');
+              alert('The text has been copied');
             },
             () => {
-              alert('コピーに失敗しました。');
+              alert('The text is fail to be copied');
             });
         });
 	}
@@ -189,7 +189,7 @@ function getResultsHTML()
 	}
 
 	result += "\n";
-	result += "総合スコア,";
+	result += "Overall Score,";
 	result += results_overall;
 	result += ",";
 
