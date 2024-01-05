@@ -120,12 +120,11 @@ input .btn-flat-simple{
   box-sizing: border-box;
 }
 
-// リセットCSS（すでに指定済なら不要）
 * {
   box-sizing: border-box;
 }
 
 .input-range {
-    height: 14px; // バーの高さ
-    width: 100%; // スライダーの幅
+    height: 14px; 
+    width: 100%; 
   }
